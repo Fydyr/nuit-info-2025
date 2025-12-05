@@ -1,6 +1,7 @@
 <template>
     <body>
         <buttonComponent></buttonComponent>
+        <ChatbotComponent></ChatbotComponent>
     </body>
 </template>
 
