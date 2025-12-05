@@ -1,5 +1,5 @@
 <template>
-    <img :src="currentImage" @click="toggleButton" id="button" />
+    <img :src="currentImage" @click="toggleButton" id="button" alt="button" />
 
     <transition name="fade">
         <div v-if="showParchment" class="parchment-overlay" @click="closeParchment">
