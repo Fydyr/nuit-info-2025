@@ -23,5 +23,18 @@
   },
   "devDependencies": {
     "@types/three": "^0.181.0"
-  }
+  },
+  "version": "1.0.0",
+  "description": "Projet pour le concours national de la nuit de l'info 2025",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fydyr/nuit-info-2025.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fydyr/nuit-info-2025/issues"
+  },
+  "homepage": "https://github.com/Fydyr/nuit-info-2025#readme"
 }

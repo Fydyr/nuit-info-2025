@@ -1,4 +1,3 @@
 <template>
-    <contentComponent></contentComponent>
     <footerComponent></footerComponent>
 </template>
