@@ -1,0 +1,3 @@
+<template>
+    <footerComponent></footerComponent>
+</template>

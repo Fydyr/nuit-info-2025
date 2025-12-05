@@ -1,0 +1,42 @@
+{
+  "name": "nuit-info-2025",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.9.0",
+    "@nuxt/image": "^2.0.0",
+    "@nuxt/ui": "^4.2.1",
+    "@vueuse/nuxt": "^14.1.0",
+    "better-sqlite3": "^12.5.0",
+    "node-llama-cpp": "^3.14.2",
+    "nuxt": "^4.2.1",
+    "three": "^0.181.2",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/three": "^0.181.0"
+  },
+  "version": "1.0.0",
+  "description": "Projet pour le concours national de la nuit de l'info 2025",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fydyr/nuit-info-2025.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fydyr/nuit-info-2025/issues"
+  },
+  "homepage": "https://github.com/Fydyr/nuit-info-2025#readme"
+}
