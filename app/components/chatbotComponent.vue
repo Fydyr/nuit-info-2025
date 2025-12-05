@@ -1,4 +1,5 @@
 <script setup>
+import buttonComponent from './buttonComponent.vue';
 const input = ref('')
 const conversation = ref([])
 const pending = ref(false)
@@ -40,6 +41,7 @@ watch(conversation, () => {
 
 <template>
   <div style="max-width: 600px; margin: 2rem auto; font-family: sans-serif;">
+    <buttonComponent />
     <h1>Useless Snappy Chat</h1>
     
     <div 

@@ -1,21 +1,19 @@
 <script setup>
 import SanteWidget from '../components/SanteWidget.vue';
 import contentComponent from '../components/chatbotComponent.vue';
-import footerComponent from '../components/buttonComponent.vue';
 import HiddenSnakeComponent from '../components/HiddenSnakeComponent.vue';
 </script>
 
 <template>
   <div>
+    <HiddenSnakeComponent />
+    <contentComponent />
     <div class="page-container">
       <h1>Défi : CTO de Votre Santé Posturale</h1>
       
       <SanteWidget />
       
     </div>
-    <contentComponent />
-    <footerComponent />
-    <HiddenSnakeComponent />
   </div>
 </template>
 <style>
