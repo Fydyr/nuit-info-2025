@@ -92,18 +92,25 @@ const lastSnappyMessage = computed(() => {
   margin-bottom: 0; /* Lower the image further */
 }
 
+.snappy-image {
+  width: 230px;
+  height: auto;
+  display: block;
+}
+
 .speech-bubble {
   position: absolute;
-  bottom: 175px; /* Position above the image */
+  bottom: 185px; /* Position above the image */
   left: 50%;
   transform: translateX(-50%);
   background-color: #f0f0f0;
   border: 2px solid #a0a0a0;
   border-radius: 4px; /* More squared-off */
   padding: 0.75rem;
-  min-width: 150px;
-  max-width: 250px;
+  min-width: 160px;
+  max-width: 260px;
   min-height: 40px;
+  font-size: 1rem;
 }
 
 .message-form {
@@ -115,7 +122,7 @@ const lastSnappyMessage = computed(() => {
   padding: 0.5rem;
   border: 2px solid #a0a0a0;
   border-radius: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .message-form button {
   width: 19%;
@@ -124,5 +131,6 @@ const lastSnappyMessage = computed(() => {
   border-radius: 0;
   background-color: #e0e0e0;
   cursor: pointer;
+  font-size: 1rem;
 }
 </style>
