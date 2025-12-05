@@ -1,5 +1,5 @@
 <script setup>
-import buttonComponent from './buttonComponent.vue';
+import { computed } from 'vue';
 const input = ref('')
 const conversation = ref([])
 const pending = ref(false)
@@ -37,33 +37,87 @@ watch(conversation, () => {
     }
   })
 })
+
+const lastSnappyMessage = computed(() => {
+  if (pending.value) {
+    return 'Thinking of an excuse...';
+  }
+  // Find the last message that is not from the 'User'
+  const lastBotMessage = [...conversation.value].reverse().find(msg => msg.role !== 'User');
+  return lastBotMessage ? lastBotMessage.text : 'Ask me something!';
+})
 </script>
 
 <template>
-  <div style="max-width: 600px; margin: 2rem auto; font-family: sans-serif;">
-    <buttonComponent />
-    <h1>Useless Snappy Chat</h1>
-    
-    <div 
-      ref="chatContainer"
-      style="border: 1px solid #ccc; padding: 1rem; height: 300px; overflow-y: auto; margin-bottom: 1rem;"
-    >
-      <div v-for="(msg, i) in conversation" :key="i" :style="{ textAlign: msg.role === 'User' ? 'right' : 'left' }">
-        <strong>{{ msg.role }}:</strong> {{ msg.text }}
+  <div class="snappy-chat-container">
+    <div class="snappy-character-area">
+      <div class="speech-bubble">
+        {{ lastSnappyMessage }}
       </div>
-      <div v-if="pending"><em>Thinking of an excuse...</em></div>
+      <img 
+        src="https://placehold.co/150x150/orange/white?text=Snappy" 
+        alt="Snappy the chatbot" 
+        class="snappy-image"
+      />
     </div>
 
-    <form @submit.prevent="sendMessage">
+    <form @submit.prevent="sendMessage" class="message-form">
       <input 
         v-model="input" 
         placeholder="Ask a question..." 
-        style="width: 80%; padding: 0.5rem;" 
         :disabled="pending"
       />
-      <button type="submit" style="width: 18%; padding: 0.5rem;" :disabled="pending">
+      <button type="submit" :disabled="pending">
         Send
       </button>
     </form>
   </div>
 </template>
+
+<style scoped>
+.snappy-chat-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.snappy-character-area {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.snappy-image {
+  border-radius: 50%;
+  border: 3px solid #ccc;
+}
+
+.speech-bubble {
+  position: absolute;
+  bottom: 160px; /* Position above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 50px;
+}
+
+.message-form {
+  display: flex;
+  gap: 1%;
+}
+.message-form input {
+  width: 80%;
+  padding: 0.5rem;
+}
+.message-form button {
+  width: 19%;
+  padding: 0.5rem;
+}
+</style>
