@@ -1,8 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import SanteWidget from '../components/SanteWidget.vue';
-import contentComponent from '../components/contentComponent.vue';
-import HiddenSnakeComponent from '../components/HiddenSnakeComponent.vue';
 
 const isPanelOpen = ref(false);
 
@@ -18,6 +15,7 @@ function togglePanel() {
     <div class="main-content">
       <contentComponent />
     </div>
+    <ChatbotComponent></ChatbotComponent>
 
     <div class="side-panel" :class="{ 'is-open': isPanelOpen }">
       <button @click="togglePanel" class="panel-toggle">

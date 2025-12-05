@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import SanteFormulaire from './SanteFormulaire.vue';
-import SanteResultats from './SanteResultats.vue';
 
 // État du widget
 const etape = ref(1); // 1 = Quiz, 2 = Résultats

@@ -55,7 +55,7 @@ const lastSnappyMessage = computed(() => {
         {{ lastSnappyMessage }}
       </div>
       <img 
-        src="https://placehold.co/150x150/orange/white?text=Snappy" 
+        src="/assets/img/Snappy_retro.png" 
         alt="Snappy the chatbot" 
         class="snappy-image"
       />
@@ -76,36 +76,38 @@ const lastSnappyMessage = computed(() => {
 
 <style scoped>
 .snappy-chat-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  font-family: sans-serif;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 350px;
+  font-family: 'Courier New', Courier, monospace; /* Retro font */
   text-align: center;
+  z-index: 1000; /* Ensure it's on top of other content like footers */
 }
 
 .snappy-character-area {
   position: relative;
   display: inline-block;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0; /* Lower the image further */
 }
 
 .snappy-image {
-  border-radius: 50%;
-  border: 3px solid #ccc;
+  /* No border or radius needed */
 }
 
 .speech-bubble {
   position: absolute;
-  bottom: 160px; /* Position above the image */
+  bottom: 175px; /* Position above the image */
   left: 50%;
   transform: translateX(-50%);
   background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1rem;
-  min-width: 200px;
-  max-width: 300px;
-  min-height: 50px;
+  border: 2px solid #a0a0a0;
+  border-radius: 4px; /* More squared-off */
+  padding: 0.75rem;
+  min-width: 150px;
+  max-width: 250px;
+  min-height: 40px;
 }
 
 .message-form {
@@ -115,9 +117,16 @@ const lastSnappyMessage = computed(() => {
 .message-form input {
   width: 80%;
   padding: 0.5rem;
+  border: 2px solid #a0a0a0;
+  border-radius: 0;
+  font-size: 0.9rem;
 }
 .message-form button {
   width: 19%;
   padding: 0.5rem;
+  border: 2px solid #a0a0a0;
+  border-radius: 0;
+  background-color: #e0e0e0;
+  cursor: pointer;
 }
 </style>
