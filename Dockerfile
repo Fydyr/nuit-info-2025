@@ -8,7 +8,7 @@ WORKDIR /app
 # Étape 1 : Installation des dépendances
 FROM base AS deps
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 # Étape 2 : Build de l'application Nuxt
 FROM base AS builder
