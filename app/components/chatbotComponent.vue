@@ -115,7 +115,7 @@ const lastSnappyMessage = computed(() => {
   font-size: 1rem;
 }
 .message-form button {
-  width: 19%;
+  width: 28%;
   padding: 0.5rem;
   border: 2px solid #a0a0a0;
   border-radius: 0;
