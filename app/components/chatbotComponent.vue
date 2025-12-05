@@ -92,10 +92,6 @@ const lastSnappyMessage = computed(() => {
   margin-bottom: 0; /* Lower the image further */
 }
 
-.snappy-image {
-  /* No border or radius needed */
-}
-
 .speech-bubble {
   position: absolute;
   bottom: 175px; /* Position above the image */
