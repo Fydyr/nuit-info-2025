@@ -1,3 +1,5 @@
 <template>
-    <exemple></exemple>
+    <div>
+        <HiddenSnakeComponent />
+    </div>
 </template>
